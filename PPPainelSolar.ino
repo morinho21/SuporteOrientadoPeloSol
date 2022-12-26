@@ -169,6 +169,8 @@ void loop()
               Sensores();
             }
         }
+    // Delay de 30 minutos
+    delay(1800000);
         
 }
 
