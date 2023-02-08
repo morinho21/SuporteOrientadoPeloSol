@@ -29,6 +29,25 @@
 
 // Projeto de um suporte de placa solar que acompanha a luminosidade do SOL.
 
+/*
+    Esse código ele é funcional, porém precisa de ajustes técnicos no equipamento montado
+    pois esse codigo foi escrito antes da parte mecanica ficar pronta e infelizmente
+    quando os alunos foram testar os motores, a parte mecanica tinha muitos defeitos
+    impossibilitando a configuração exata e totalmente funcional como o Tempo, estado
+    de giro que seria a possição calculada atraves da quantidade de passo etc...
+    
+    Outro fator desse codigo ter muita variavel que poderia ser reduzida atraves de vetores
+    foi porque infelizmente foi avaliado por professores que não tinham conhecimento nenhum
+    na area de programação e deveriamos explicar o funcionamento para os mesmo!
+    
+    esse código é a frustração completa de um aluno, que foi avaliado totalmente despropocionalmente
+    pois o aluno ajudou em todas partes e fez sozinho a parte eletrica e programação do projeto.
+    
+    Mas enfim a vida é isso, vivendo e aprendendo, deixo esse código aqui para futuramente eu ler
+    e sentir como foi frustante se empenhar em um projeto e ele não funcionar e você ser avaliado
+    desproporcionalmente.
+
+*/
 
     // Poderia ter usado vetor, porem achei mais facil assim!
     #define SensorLuz1 A0 // Definindo o pino SensorLuz1 como o pino
@@ -115,7 +134,7 @@ void loop()
         
         if(((DiferencaVerticalDireitaMeio) || (DiferencaVerticalEsquerdaMeio)) > ((DiferencaHorizontalCimaMeio) || (DiferencaHorizontalBaixoMeio)))
         {
-          tempo = 0;
+          tempo = 0; // O TEMPO TEM QUE SER CONFIGURADO CONFORME A CONFIGURAÇÃO DO DRIVER DE PASSO E DO SEU PROJETO!
               if(((DiferencaVerticalDireitaMeio) > (DiferencaVerticalEsquerdaMeio)) && (posicaoGiro != 2))
             {
               while(((DiferencaVerticalDireitaMeio) > (DiferencaVerticalEsquerdaMeio)) && (tempo < 3))
